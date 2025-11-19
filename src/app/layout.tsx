@@ -1,12 +1,8 @@
 import "@styles/global.css";
 
-import Footer from "@components/ui/footer";
-import GlobalNav from "@components/ui/global-nav";
 import { Raleway } from "next/font/google";
 import type { ReactNode } from "react";
 import { Providers } from "./provider";
-
-const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Next15 TypeScript Template",
@@ -16,12 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
-      <body className={raleway.className}>
-        <Providers>
-          <GlobalNav />
-          {children}
-          <Footer />
-        </Providers>
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
