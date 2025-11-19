@@ -15,19 +15,15 @@ import {
 } from "@requests/components/ui/sidebar";
 import {
   ArrowUpCircleIcon,
-  BarChartIcon,
-  CameraIcon,
   ClipboardListIcon,
   DatabaseIcon,
-  FileCodeIcon,
   FileIcon,
-  FileTextIcon,
-  FolderIcon,
   HelpCircleIcon,
   LayoutDashboardIcon,
-  ListIcon,
+  PackageIcon,
   SearchIcon,
   SettingsIcon,
+  ShoppingCartIcon,
   UsersIcon,
 } from "lucide-react";
 import type * as React from "react";
@@ -41,84 +37,72 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: ListIcon,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: BarChartIcon,
-    },
-    {
-      title: "Projects",
-      url: "#",
-      icon: FolderIcon,
-    },
-    {
-      title: "Team",
+      title: "HR",
       url: "#",
       icon: UsersIcon,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: CameraIcon,
       isActive: true,
-      url: "#",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Employees",
+          url: "/hr/employees",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Departments",
+          url: "/hr/departments",
         },
       ],
     },
     {
-      title: "Proposal",
-      icon: FileTextIcon,
+      title: "Sales",
       url: "#",
+      icon: ShoppingCartIcon,
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Orders",
+          url: "/sales/orders",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Customers",
+          url: "/sales/customers",
         },
       ],
     },
     {
-      title: "Prompts",
-      icon: FileCodeIcon,
+      title: "Inventory",
       url: "#",
+      icon: PackageIcon,
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Products",
+          url: "/inventory/products",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Stock",
+          url: "/inventory/stock",
+        },
+      ],
+    },
+    {
+      title: "System",
+      url: "#",
+      icon: SettingsIcon,
+      items: [
+        {
+          title: "Users",
+          url: "/system/users",
+        },
+        {
+          title: "Settings",
+          url: "/system/settings",
         },
       ],
     },
   ],
   navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: SettingsIcon,
-    },
     {
       title: "Get Help",
       url: "#",
@@ -155,7 +139,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
+            <SidebarMenuButton
+              asChild
+              className="data-[slot=sidebar-menu-button]:!p-1.5"
+            >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
                 <span className="text-base font-semibold">Acme Inc.</span>
