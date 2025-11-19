@@ -36,66 +36,66 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
+      title: "대시보드",
       url: "/dashboard",
       icon: LayoutDashboardIcon,
     },
     {
-      title: "HR",
+      title: "인사 관리",
       url: "#",
       icon: UsersIcon,
       items: [
         {
-          title: "Employees",
+          title: "직원 관리",
           url: "/hr/employees",
         },
         {
-          title: "Departments",
+          title: "부서 관리",
           url: "/hr/departments",
         },
       ],
     },
     {
-      title: "Sales",
+      title: "영업 관리",
       url: "#",
       icon: ShoppingCartIcon,
       items: [
         {
-          title: "Orders",
+          title: "주문 관리",
           url: "/sales/orders",
         },
         {
-          title: "Customers",
+          title: "고객 관리",
           url: "/sales/customers",
         },
       ],
     },
     {
-      title: "Inventory",
+      title: "재고 관리",
       url: "#",
       icon: PackageIcon,
       items: [
         {
-          title: "Products",
+          title: "품목 관리",
           url: "/inventory/products",
         },
         {
-          title: "Stock",
+          title: "재고 현황",
           url: "/inventory/stock",
         },
       ],
     },
     {
-      title: "System",
+      title: "시스템 관리",
       url: "#",
       icon: SettingsIcon,
       items: [
         {
-          title: "Users",
+          title: "사용자 관리",
           url: "/system/users",
         },
         {
-          title: "Settings",
+          title: "시스템 설정",
           url: "/system/settings",
         },
       ],
@@ -103,29 +103,29 @@ const data = {
   ],
   navSecondary: [
     {
-      title: "Get Help",
+      title: "고객 지원",
       url: "#",
       icon: HelpCircleIcon,
     },
     {
-      title: "Search",
+      title: "검색",
       url: "#",
       icon: SearchIcon,
     },
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "데이터 라이브러리",
       url: "#",
       icon: DatabaseIcon,
     },
     {
-      name: "Reports",
+      name: "보고서",
       url: "#",
       icon: ClipboardListIcon,
     },
     {
-      name: "Word Assistant",
+      name: "문서 도우미",
       url: "#",
       icon: FileIcon,
     },
@@ -140,7 +140,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:p-1.5!"
             >
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
