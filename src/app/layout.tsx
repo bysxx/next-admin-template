@@ -1,6 +1,5 @@
 import "@styles/global.css";
 
-import { Raleway } from "next/font/google";
 import type { ReactNode } from "react";
 import { Providers } from "./provider";
 
