@@ -1,7 +1,4 @@
-"use client"
-
-import * as React from "react"
-import { LucideIcon } from "lucide-react"
+"use client";
 
 import {
   SidebarGroup,
@@ -9,17 +6,19 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@requests/components/ui/sidebar"
+} from "@requests/components/ui/sidebar";
+import type { LucideIcon } from "lucide-react";
+import type * as React from "react";
 
 export function NavSecondary({
   items,
   ...props
 }: {
   items: {
-    title: string
-    url: string
-    icon: LucideIcon
-  }[]
+    title: string;
+    url: string;
+    icon: LucideIcon;
+  }[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (
     <SidebarGroup {...props}>
@@ -38,5 +37,5 @@ export function NavSecondary({
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

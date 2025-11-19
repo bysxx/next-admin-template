@@ -1,24 +1,23 @@
-"use client"
+"use client";
 
-import { MailIcon, PlusCircleIcon, type LucideIcon } from "lucide-react"
-
-import { Button } from "@requests/components/ui/button"
+import { Button } from "@requests/components/ui/button";
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@requests/components/ui/sidebar"
+} from "@requests/components/ui/sidebar";
+import { type LucideIcon, MailIcon, PlusCircleIcon } from "lucide-react";
 
 export function NavMain({
   items,
 }: {
   items: {
-    title: string
-    url: string
-    icon?: LucideIcon
-  }[]
+    title: string;
+    url: string;
+    icon?: LucideIcon;
+  }[];
 }) {
   return (
     <SidebarGroup>
@@ -32,11 +31,7 @@ export function NavMain({
               <PlusCircleIcon />
               <span>Quick Create</span>
             </SidebarMenuButton>
-            <Button
-              size="icon"
-              className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"
-              variant="outline"
-            >
+            <Button size="icon" className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0" variant="outline">
               <MailIcon />
               <span className="sr-only">Inbox</span>
             </Button>
@@ -54,5 +49,5 @@ export function NavMain({
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

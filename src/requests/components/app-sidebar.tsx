@@ -1,6 +1,18 @@
 "use client";
 
-import * as React from "react";
+import { NavDocuments } from "@requests/components/nav-documents";
+import { NavMain } from "@requests/components/nav-main";
+import { NavSecondary } from "@requests/components/nav-secondary";
+import { NavUser } from "@requests/components/nav-user";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@requests/components/ui/sidebar";
 import {
   ArrowUpCircleIcon,
   BarChartIcon,
@@ -18,20 +30,7 @@ import {
   SettingsIcon,
   UsersIcon,
 } from "lucide-react";
-
-import { NavDocuments } from "@requests/components/nav-documents";
-import { NavMain } from "@requests/components/nav-main";
-import { NavSecondary } from "@requests/components/nav-secondary";
-import { NavUser } from "@requests/components/nav-user";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@requests/components/ui/sidebar";
+import type * as React from "react";
 
 const data = {
   user: {
@@ -156,10 +155,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
-            >
+            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
               <a href="#">
                 <ArrowUpCircleIcon className="h-5 w-5" />
                 <span className="text-base font-semibold">Acme Inc.</span>
