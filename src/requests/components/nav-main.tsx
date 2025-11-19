@@ -56,35 +56,25 @@ function NavMainItem({
   };
 }) {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = React.useState(item.isActive ?? false);
 
-  // 하위 아이템 중 현재 경로와 일치하는 것이 있는지 확인
+  React.useEffect(() => {
+    if (item.items?.some((subItem) => pathname === subItem.url)) {
+      setIsOpen(true);
+    }
+  }, [pathname, item.items]);
+
+  // 상위 메뉴 활성화 여부 계산
+  const isPathMatch = pathname === item.url;
   const hasActiveChild = item.items?.some(
     (subItem) => pathname === subItem.url
   );
-
-  // 기본 isActive 상태 또는 하위 아이템 활성화 여부에 따라 초기 상태 설정
-  // 단, pathname이 변경될 때마다 자동으로 열리게 하려면 useEffect나 파생 상태를 써야 함
-  // 여기서는 단순하게 초기 렌더링 및 pathname 변경 시 반응하도록 처리
-  const [isOpen, setIsOpen] = React.useState(item.isActive ?? hasActiveChild);
-
-  // pathname이 변경되어 하위 아이템이 활성화되면 자동으로 메뉴를 열도록 동기화
-  React.useEffect(() => {
-    if (hasActiveChild) {
-      setIsOpen(true);
-    }
-  }, [hasActiveChild]);
-
-  // 상위 메뉴 자체의 활성화 여부 (하위 메뉴가 없을 때 주로 사용)
-  const isActive = pathname === item.url || hasActiveChild;
+  const isActive = isPathMatch || hasActiveChild;
 
   if (!item.items?.length) {
     return (
       <SidebarMenuItem>
-        <SidebarMenuButton
-          asChild
-          tooltip={item.title}
-          isActive={pathname === item.url}
-        >
+        <SidebarMenuButton asChild tooltip={item.title} isActive={isPathMatch}>
           <a href={item.url}>
             {item.icon && <item.icon />}
             <span>{item.title}</span>
@@ -99,7 +89,7 @@ function NavMainItem({
       <SidebarMenuButton
         tooltip={item.title}
         onClick={() => setIsOpen(!isOpen)}
-        isActive={isActive} // 상위 메뉴 활성화 표시 (선택 사항, 보통 하위 메뉴가 열려있으면 활성화로 볼 수 있음)
+        isActive={isActive}
       >
         {item.icon && <item.icon />}
         <span>{item.title}</span>

@@ -25,8 +25,12 @@ import {
   SettingsIcon,
   ShoppingCartIcon,
   UsersIcon,
+  MoonIcon,
+  SunIcon,
 } from "lucide-react";
-import type * as React from "react";
+import * as React from "react";
+import { useTheme } from "next-themes";
+import { Switch } from "@requests/components/ui/switch";
 
 const data = {
   user: {
@@ -133,6 +137,13 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -156,6 +167,28 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <div className="group-data-[collapsible=icon]:hidden flex w-full items-center justify-between p-2">
+              <div className="flex items-center gap-2 px-2 text-sm font-medium text-sidebar-foreground/70">
+                {theme === "dark" ? (
+                  <MoonIcon className="h-4 w-4" />
+                ) : (
+                  <SunIcon className="h-4 w-4" />
+                )}
+                <span>{theme === "dark" ? "다크 모드" : "라이트 모드"}</span>
+              </div>
+              {mounted && (
+                <Switch
+                  checked={theme === "dark"}
+                  onCheckedChange={(checked) =>
+                    setTheme(checked ? "dark" : "light")
+                  }
+                />
+              )}
+            </div>
+          </SidebarMenuItem>
+        </SidebarMenu>
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
