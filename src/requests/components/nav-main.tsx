@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronRightIcon, type LucideIcon } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 
@@ -75,10 +76,10 @@ function NavMainItem({
     return (
       <SidebarMenuItem>
         <SidebarMenuButton asChild tooltip={item.title} isActive={isPathMatch}>
-          <a href={item.url}>
+          <Link href={item.url}>
             {item.icon && <item.icon />}
             <span>{item.title}</span>
-          </a>
+          </Link>
         </SidebarMenuButton>
       </SidebarMenuItem>
     );
@@ -104,9 +105,9 @@ function NavMainItem({
           {item.items.map((subItem) => (
             <SidebarMenuSubItem key={subItem.title}>
               <SidebarMenuSubButton asChild isActive={pathname === subItem.url}>
-                <a href={subItem.url}>
+                <Link href={subItem.url}>
                   <span>{subItem.title}</span>
-                </a>
+                </Link>
               </SidebarMenuSubButton>
             </SidebarMenuSubItem>
           ))}

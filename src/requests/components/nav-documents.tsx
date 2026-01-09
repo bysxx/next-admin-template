@@ -15,7 +15,13 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@requests/components/ui/sidebar";
-import { FolderIcon, type LucideIcon, MoreHorizontalIcon, ShareIcon } from "lucide-react";
+import {
+  FolderIcon,
+  type LucideIcon,
+  MoreHorizontalIcon,
+  ShareIcon,
+} from "lucide-react";
+import Link from "next/link";
 
 export function NavDocuments({
   items,
@@ -35,14 +41,17 @@ export function NavDocuments({
         {items.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
-              <a href={item.url}>
+              <Link href={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuAction showOnHover className="rounded-sm data-[state=open]:bg-accent">
+                <SidebarMenuAction
+                  showOnHover
+                  className="rounded-sm data-[state=open]:bg-accent"
+                >
                   <MoreHorizontalIcon />
                   <span className="sr-only">More</span>
                 </SidebarMenuAction>
