@@ -16,7 +16,6 @@ A feature-rich, production-ready template for building full-stack applications w
 -   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 -   **Language**: [TypeScript](https://www.typescriptlang.org/)
 -   **Authentication**: [NextAuth.js](https://next-auth.js.org/) for robust and easy-to-implement authentication.
--   **Database**: Integrated with [MongoDB](https://www.mongodb.com/) using `@auth/mongodb-adapter`.
 -   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) for a utility-first CSS framework.
 -   **Data Fetching**: [TanStack Query (React Query) v5](https://tanstack.com/query/latest) for server-state management.
 -   **State Management**: [Zustand](https://github.com/pmndrs/zustand) for minimal and boilerplate-free client-side state management.
@@ -53,9 +52,6 @@ Follow these instructions to get a copy of the project up and running on your lo
     NEXTAUTH_SECRET= # openssl rand -hex 32
     NEXTAUTH_URL=http://localhost:3000
 
-    # MongoDB
-    MONGODB_URI= # Your MongoDB connection string
-
     # Kakao OAuth
     KAKAO_CLIENT_ID=
     KAKAO_CLIENT_SECRET=
@@ -86,7 +82,6 @@ In the project directory, you can run:
 
 -   **Frontend**: React 19, Next.js 15
 -   **Backend**: Next.js API Routes
--   **Database**: MongoDB
 -   **Authentication**: NextAuth.js
 -   **Styling**: Tailwind CSS
 -   **Data Fetching**: TanStack Query (React Query)
