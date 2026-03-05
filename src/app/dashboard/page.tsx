@@ -1,6 +1,6 @@
-import { ChartAreaInteractive } from "@/requests/components/chart-area-interactive";
-import { DataTable } from "@/requests/components/data-table";
-import { SectionCards } from "@/requests/components/section-cards";
+import { ChartAreaInteractive } from "components/chart-area-interactive";
+import { DataTable } from "components/data-table";
+import { SectionCards } from "components/section-cards";
 
 import data from "./data.json";
 

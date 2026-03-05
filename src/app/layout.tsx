@@ -1,8 +1,8 @@
 import "@/styles/global.css";
 
-import { AppSidebar } from "@/requests/components/app-sidebar";
-import { SiteHeader } from "@/requests/components/site-header";
-import { SidebarInset, SidebarProvider } from "@/requests/components/ui/sidebar";
+import { AppSidebar } from "components/app-sidebar";
+import { SiteHeader } from "components/site-header";
+import { SidebarInset, SidebarProvider } from "components/ui/sidebar";
 import type { ReactNode } from "react";
 import { Providers } from "./provider";
 
