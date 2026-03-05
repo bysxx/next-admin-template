@@ -1,15 +1,15 @@
-import { Button } from "@requests/components/ui/button";
+import { Button } from "@/requests/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@requests/components/ui/card";
-import { Input } from "@requests/components/ui/input";
-import { Label } from "@requests/components/ui/label";
-import { Separator } from "@requests/components/ui/separator";
-import { Switch } from "@requests/components/ui/switch";
+} from "@/requests/components/ui/card";
+import { Input } from "@/requests/components/ui/input";
+import { Label } from "@/requests/components/ui/label";
+import { Separator } from "@/requests/components/ui/separator";
+import { Switch } from "@/requests/components/ui/switch";
 
 export default function SettingsPage() {
   return (

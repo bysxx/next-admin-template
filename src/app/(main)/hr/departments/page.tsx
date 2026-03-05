@@ -1,11 +1,11 @@
-import { Button } from "@requests/components/ui/button";
+import { Button } from "@/requests/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@requests/components/ui/card";
+} from "@/requests/components/ui/card";
 import {
   Table,
   TableBody,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@requests/components/ui/table";
+} from "@/requests/components/ui/table";
 import { PlusIcon } from "lucide-react";
 
 export default function DepartmentsPage() {

@@ -36,26 +36,8 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "@requests/*": [
-        "./requests/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@interfaces/*": [
-        "./interfaces/*"
-      ],
-      "@libs/*": [
-        "./libs/*"
-      ],
-      "@stores/*": [
-        "./stores/*"
-      ],
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@components/*": [
-        "./components/*"
+      "@/*": [
+        "./*"
       ]
     },
     "plugins": [

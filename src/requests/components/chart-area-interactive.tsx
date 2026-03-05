@@ -1,10 +1,10 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@requests/components/ui/card";
-import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@requests/components/ui/chart";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@requests/components/ui/select";
-import { ToggleGroup, ToggleGroupItem } from "@requests/components/ui/toggle-group";
-import { useIsMobile } from "@requests/hooks/use-mobile";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/requests/components/ui/card";
+import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/requests/components/ui/chart";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/requests/components/ui/select";
+import { ToggleGroup, ToggleGroupItem } from "@/requests/components/ui/toggle-group";
+import { useIsMobile } from "@/requests/hooks/use-mobile";
 import * as React from "react";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 

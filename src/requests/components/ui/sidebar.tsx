@@ -1,14 +1,14 @@
 "use client";
 
 import { Slot } from "@radix-ui/react-slot";
-import { Button } from "@requests/components/ui/button";
-import { Input } from "@requests/components/ui/input";
-import { Separator } from "@requests/components/ui/separator";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@requests/components/ui/sheet";
-import { Skeleton } from "@requests/components/ui/skeleton";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@requests/components/ui/tooltip";
-import { useIsMobile } from "@requests/hooks/use-mobile";
-import { cn } from "@requests/lib/utils";
+import { Button } from "@/requests/components/ui/button";
+import { Input } from "@/requests/components/ui/input";
+import { Separator } from "@/requests/components/ui/separator";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/requests/components/ui/sheet";
+import { Skeleton } from "@/requests/components/ui/skeleton";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/requests/components/ui/tooltip";
+import { useIsMobile } from "@/requests/hooks/use-mobile";
+import { cn } from "@/requests/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 import * as React from "react";

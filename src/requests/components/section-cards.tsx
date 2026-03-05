@@ -1,5 +1,5 @@
-import { Badge } from "@requests/components/ui/badge";
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@requests/components/ui/card";
+import { Badge } from "@/requests/components/ui/badge";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/requests/components/ui/card";
 import { TrendingDownIcon, TrendingUpIcon } from "lucide-react";
 
 export function SectionCards() {

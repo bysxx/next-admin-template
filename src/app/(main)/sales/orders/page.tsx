@@ -1,13 +1,13 @@
-import { Badge } from "@requests/components/ui/badge";
-import { Button } from "@requests/components/ui/button";
+import { Badge } from "@/requests/components/ui/badge";
+import { Button } from "@/requests/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@requests/components/ui/card";
-import { Input } from "@requests/components/ui/input";
+} from "@/requests/components/ui/card";
+import { Input } from "@/requests/components/ui/input";
 import {
   Table,
   TableBody,
@@ -15,13 +15,13 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@requests/components/ui/table";
+} from "@/requests/components/ui/table";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@requests/components/ui/tabs";
+} from "@/requests/components/ui/tabs";
 import { PlusIcon, SearchIcon } from "lucide-react";
 
 export default function OrdersPage() {

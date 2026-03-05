@@ -19,15 +19,15 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Badge } from "@requests/components/ui/badge";
-import { Button } from "@requests/components/ui/button";
+import { Badge } from "@/requests/components/ui/badge";
+import { Button } from "@/requests/components/ui/button";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@requests/components/ui/chart";
-import { Checkbox } from "@requests/components/ui/checkbox";
+} from "@/requests/components/ui/chart";
+import { Checkbox } from "@/requests/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -35,17 +35,17 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@requests/components/ui/dropdown-menu";
-import { Input } from "@requests/components/ui/input";
-import { Label } from "@requests/components/ui/label";
+} from "@/requests/components/ui/dropdown-menu";
+import { Input } from "@/requests/components/ui/input";
+import { Label } from "@/requests/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@requests/components/ui/select";
-import { Separator } from "@requests/components/ui/separator";
+} from "@/requests/components/ui/select";
+import { Separator } from "@/requests/components/ui/separator";
 import {
   Sheet,
   SheetClose,
@@ -55,7 +55,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@requests/components/ui/sheet";
+} from "@/requests/components/ui/sheet";
 import {
   Table,
   TableBody,
@@ -63,14 +63,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@requests/components/ui/table";
+} from "@/requests/components/ui/table";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@requests/components/ui/tabs";
-import { useIsMobile } from "@requests/hooks/use-mobile";
+} from "@/requests/components/ui/tabs";
+import { useIsMobile } from "@/requests/hooks/use-mobile";
 import {
   type ColumnDef,
   type ColumnFiltersState,

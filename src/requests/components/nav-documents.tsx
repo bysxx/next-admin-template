@@ -5,7 +5,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@requests/components/ui/dropdown-menu";
+} from "@/requests/components/ui/dropdown-menu";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -14,7 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@requests/components/ui/sidebar";
+} from "@/requests/components/ui/sidebar";
 import {
   FolderIcon,
   type LucideIcon,
