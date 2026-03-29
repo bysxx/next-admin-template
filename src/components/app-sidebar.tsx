@@ -1,5 +1,23 @@
 "use client";
 
+import {
+  ArrowUpCircleIcon,
+  ClipboardListIcon,
+  DatabaseIcon,
+  FileIcon,
+  HelpCircleIcon,
+  LayoutDashboardIcon,
+  MoonIcon,
+  PackageIcon,
+  SearchIcon,
+  SettingsIcon,
+  ShoppingCartIcon,
+  SunIcon,
+  UsersIcon,
+} from "lucide-react";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import * as React from "react";
 import { NavDocuments } from "@/components/nav-documents";
 import { NavMain } from "@/components/nav-main";
 import { NavSecondary } from "@/components/nav-secondary";
@@ -13,25 +31,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import {
-  ArrowUpCircleIcon,
-  ClipboardListIcon,
-  DatabaseIcon,
-  FileIcon,
-  HelpCircleIcon,
-  LayoutDashboardIcon,
-  PackageIcon,
-  SearchIcon,
-  SettingsIcon,
-  ShoppingCartIcon,
-  UsersIcon,
-  MoonIcon,
-  SunIcon,
-} from "lucide-react";
-import * as React from "react";
-import { useTheme } from "next-themes";
 import { Switch } from "@/components/ui/switch";
-import Link from "next/link";
 
 const data = {
   user: {
@@ -150,10 +150,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              asChild
-              className="data-[slot=sidebar-menu-button]:p-1.5!"
-            >
+            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:p-1.5!">
               <Link href="/dashboard">
                 <ArrowUpCircleIcon className="h-5 w-5" />
                 <span className="text-base font-semibold">EnterNext.</span>
@@ -170,24 +167,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            <div className="group-data-[collapsible=icon]:hidden flex w-full items-center justify-between p-2">
-              <div className="flex items-center gap-2 px-2 text-sm font-medium text-sidebar-foreground/70">
-                {theme === "dark" ? (
-                  <MoonIcon className="h-4 w-4" />
-                ) : (
-                  <SunIcon className="h-4 w-4" />
-                )}
-                <span>{theme === "dark" ? "다크 모드" : "라이트 모드"}</span>
-              </div>
-              {mounted && (
+            {mounted && (
+              <div className="group-data-[collapsible=icon]:hidden flex w-full items-center justify-between p-2">
+                <div className="flex items-center gap-2 px-2 text-sm font-medium text-sidebar-foreground/70">
+                  {theme === "dark" ? <MoonIcon className="h-4 w-4" /> : <SunIcon className="h-4 w-4" />}
+                  <span>{theme === "dark" ? "다크 모드" : "라이트 모드"}</span>
+                </div>
                 <Switch
                   checked={theme === "dark"}
-                  onCheckedChange={(checked) =>
-                    setTheme(checked ? "dark" : "light")
-                  }
+                  onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
                 />
-              )}
-            </div>
+              </div>
+            )}
           </SidebarMenuItem>
         </SidebarMenu>
         <NavUser user={data.user} />

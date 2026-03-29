@@ -1,28 +1,10 @@
+import { PlusIcon, SearchIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import { PlusIcon, SearchIcon } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function OrdersPage() {
   return (
@@ -30,9 +12,7 @@ export default function OrdersPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">주문 관리</h1>
-          <p className="text-muted-foreground">
-            고객 주문 내역 및 처리 상태를 관리합니다.
-          </p>
+          <p className="text-muted-foreground">고객 주문 내역 및 처리 상태를 관리합니다.</p>
         </div>
         <Button>
           <PlusIcon className="mr-2 h-4 w-4" />
@@ -49,11 +29,7 @@ export default function OrdersPage() {
           </TabsList>
           <div className="relative w-64">
             <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="주문 검색..."
-              className="pl-8"
-            />
+            <Input type="search" placeholder="주문 검색..." className="pl-8" />
           </div>
         </div>
 
@@ -61,9 +37,7 @@ export default function OrdersPage() {
           <Card>
             <CardHeader>
               <CardTitle>최근 주문</CardTitle>
-              <CardDescription>
-                최근 접수된 판매 주문 및 현황입니다.
-              </CardDescription>
+              <CardDescription>최근 접수된 판매 주문 및 현황입니다.</CardDescription>
             </CardHeader>
             <CardContent>
               <Table>
@@ -87,7 +61,9 @@ export default function OrdersPage() {
                       <Badge variant="default">완료</Badge>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">상세</Button>
+                      <Button variant="ghost" size="sm">
+                        상세
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow>
@@ -99,7 +75,9 @@ export default function OrdersPage() {
                       <Badge variant="secondary">대기중</Badge>
                     </TableCell>
                     <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">상세</Button>
+                      <Button variant="ghost" size="sm">
+                        상세
+                      </Button>
                     </TableCell>
                   </TableRow>
                 </TableBody>

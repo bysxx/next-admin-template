@@ -18,17 +18,12 @@ export function Providers(props: { children: React.ReactNode }) {
             staleTime: 5 * 1000,
           },
         },
-      })
+      }),
   );
 
   return (
     <QueryClientProvider client={queryClient}>
-      <NextThemesProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
+      <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
         <ReactQueryStreamedHydration>
           {props.children}
           <Toaster />

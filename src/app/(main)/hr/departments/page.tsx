@@ -1,20 +1,7 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { PlusIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function DepartmentsPage() {
   return (
@@ -22,9 +9,7 @@ export default function DepartmentsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">부서 관리</h1>
-          <p className="text-muted-foreground">
-            조직 구조 및 부서 정보를 관리합니다.
-          </p>
+          <p className="text-muted-foreground">조직 구조 및 부서 정보를 관리합니다.</p>
         </div>
         <Button>
           <PlusIcon className="mr-2 h-4 w-4" />
@@ -35,9 +20,7 @@ export default function DepartmentsPage() {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              총 부서 수
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">총 부서 수</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12</div>
@@ -45,9 +28,7 @@ export default function DepartmentsPage() {
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              총 인원
-            </CardTitle>
+            <CardTitle className="text-sm font-medium">총 인원</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">145</div>
@@ -58,9 +39,7 @@ export default function DepartmentsPage() {
       <Card>
         <CardHeader>
           <CardTitle>부서 현황</CardTitle>
-          <CardDescription>
-            모든 부서 목록 및 부서장 정보입니다.
-          </CardDescription>
+          <CardDescription>모든 부서 목록 및 부서장 정보입니다.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
@@ -78,7 +57,9 @@ export default function DepartmentsPage() {
                 <TableCell>박지성</TableCell>
                 <TableCell>45</TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">상세보기</Button>
+                  <Button variant="ghost" size="sm">
+                    상세보기
+                  </Button>
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -86,7 +67,9 @@ export default function DepartmentsPage() {
                 <TableCell>이영표</TableCell>
                 <TableCell>8</TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">상세보기</Button>
+                  <Button variant="ghost" size="sm">
+                    상세보기
+                  </Button>
                 </TableCell>
               </TableRow>
             </TableBody>

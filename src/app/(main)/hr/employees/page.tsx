@@ -1,21 +1,8 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { PlusIcon, SearchIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function EmployeesPage() {
   return (
@@ -23,9 +10,7 @@ export default function EmployeesPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">직원 관리</h1>
-          <p className="text-muted-foreground">
-            직원 정보, 역할 및 소속 부서를 관리합니다.
-          </p>
+          <p className="text-muted-foreground">직원 정보, 역할 및 소속 부서를 관리합니다.</p>
         </div>
         <Button>
           <PlusIcon className="mr-2 h-4 w-4" />
@@ -36,20 +21,14 @@ export default function EmployeesPage() {
       <div className="flex items-center space-x-2">
         <div className="relative flex-1 max-w-sm">
           <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="직원 검색..."
-            className="pl-8"
-          />
+          <Input type="search" placeholder="직원 검색..." className="pl-8" />
         </div>
       </div>
 
       <Card>
         <CardHeader>
           <CardTitle>직원 목록</CardTitle>
-          <CardDescription>
-            모든 직원의 이름, 역할, 상태를 포함한 목록입니다.
-          </CardDescription>
+          <CardDescription>모든 직원의 이름, 역할, 상태를 포함한 목록입니다.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
@@ -71,7 +50,9 @@ export default function EmployeesPage() {
                 <TableCell>기술연구소</TableCell>
                 <TableCell>재직중</TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">수정</Button>
+                  <Button variant="ghost" size="sm">
+                    수정
+                  </Button>
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -81,7 +62,9 @@ export default function EmployeesPage() {
                 <TableCell>인사팀</TableCell>
                 <TableCell>재직중</TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">수정</Button>
+                  <Button variant="ghost" size="sm">
+                    수정
+                  </Button>
                 </TableCell>
               </TableRow>
             </TableBody>

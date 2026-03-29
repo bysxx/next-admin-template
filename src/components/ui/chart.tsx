@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import * as React from "react";
 import * as RechartsPrimitive from "recharts";
+import { cn } from "@/lib/utils";
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const;
@@ -70,6 +70,7 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
 
   return (
     <style
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: chart CSS variable injection from shadcn/ui
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
@@ -107,19 +108,25 @@ function ChartTooltipContent({
   nameKey,
   labelKey,
 }: React.ComponentProps<"div"> & {
-    active?: boolean;
-    payload?: Array<Record<string, unknown>>;
-    label?: string;
-    labelFormatter?: (label: string, payload: Array<Record<string, unknown>>) => React.ReactNode;
-    labelClassName?: string;
-    formatter?: (value: unknown, name: string, item: Record<string, unknown>, index: number, payload: Array<Record<string, unknown>>) => React.ReactNode;
-    color?: string;
-    hideLabel?: boolean;
-    hideIndicator?: boolean;
-    indicator?: "line" | "dot" | "dashed";
-    nameKey?: string;
-    labelKey?: string;
-  }) {
+  active?: boolean;
+  payload?: Array<Record<string, unknown>>;
+  label?: string;
+  labelFormatter?: (label: string, payload: Array<Record<string, unknown>>) => React.ReactNode;
+  labelClassName?: string;
+  formatter?: (
+    value: unknown,
+    name: string,
+    item: Record<string, unknown>,
+    index: number,
+    payload: Array<Record<string, unknown>>,
+  ) => React.ReactNode;
+  color?: string;
+  hideLabel?: boolean;
+  hideIndicator?: boolean;
+  indicator?: "line" | "dot" | "dashed";
+  nameKey?: string;
+  labelKey?: string;
+}) {
   const { config } = useChart();
 
   const tooltipLabel = React.useMemo(() => {
@@ -175,7 +182,13 @@ function ChartTooltipContent({
                 )}
               >
                 {formatter && item?.value !== undefined && item.name ? (
-                  formatter(item.value, item.name as string, item, index, item.payload as Array<Record<string, unknown>>)
+                  formatter(
+                    item.value,
+                    item.name as string,
+                    item,
+                    index,
+                    item.payload as Array<Record<string, unknown>>,
+                  )
                 ) : (
                   <>
                     {itemConfig?.icon ? (
@@ -233,11 +246,11 @@ function ChartLegendContent({
   verticalAlign = "bottom",
   nameKey,
 }: React.ComponentProps<"div"> & {
-    payload?: Array<Record<string, unknown>>;
-    verticalAlign?: "top" | "bottom" | "middle";
-    hideIcon?: boolean;
-    nameKey?: string;
-  }) {
+  payload?: Array<Record<string, unknown>>;
+  verticalAlign?: "top" | "bottom" | "middle";
+  hideIcon?: boolean;
+  nameKey?: string;
+}) {
   const { config } = useChart();
 
   if (!payload?.length) {
@@ -301,4 +314,4 @@ function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key:
   return configLabelKey in config ? config[configLabelKey] : config[key as keyof typeof config];
 }
 
-export { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, ChartStyle };
+export { ChartContainer, ChartLegend, ChartLegendContent, ChartStyle, ChartTooltip, ChartTooltipContent };

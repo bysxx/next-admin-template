@@ -1,22 +1,9 @@
+import { FilterIcon, PlusIcon, SearchIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { FilterIcon, PlusIcon, SearchIcon } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function ProductsPage() {
   return (
@@ -24,9 +11,7 @@ export default function ProductsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">품목 관리</h1>
-          <p className="text-muted-foreground">
-            제품 카탈로그 및 가격 정보를 관리합니다.
-          </p>
+          <p className="text-muted-foreground">제품 카탈로그 및 가격 정보를 관리합니다.</p>
         </div>
         <Button>
           <PlusIcon className="mr-2 h-4 w-4" />
@@ -37,11 +22,7 @@ export default function ProductsPage() {
       <div className="flex items-center gap-2">
         <div className="relative flex-1 max-w-sm">
           <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="품목 검색..."
-            className="pl-8"
-          />
+          <Input type="search" placeholder="품목 검색..." className="pl-8" />
         </div>
         <Button variant="outline" size="icon">
           <FilterIcon className="h-4 w-4" />
@@ -51,9 +32,7 @@ export default function ProductsPage() {
       <Card>
         <CardHeader>
           <CardTitle>품목 카탈로그</CardTitle>
-          <CardDescription>
-            재고에 등록된 모든 품목의 상세 정보입니다.
-          </CardDescription>
+          <CardDescription>재고에 등록된 모든 품목의 상세 정보입니다.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
@@ -77,7 +56,9 @@ export default function ProductsPage() {
                   <Badge variant="outline">판매중</Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">수정</Button>
+                  <Button variant="ghost" size="sm">
+                    수정
+                  </Button>
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -89,7 +70,9 @@ export default function ProductsPage() {
                   <Badge variant="outline">판매중</Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">수정</Button>
+                  <Button variant="ghost" size="sm">
+                    수정
+                  </Button>
                 </TableCell>
               </TableRow>
             </TableBody>

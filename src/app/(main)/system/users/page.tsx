@@ -1,23 +1,10 @@
+import { PlusIcon, SearchIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { PlusIcon, SearchIcon } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function UsersPage() {
   return (
@@ -25,9 +12,7 @@ export default function UsersPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">사용자 관리</h1>
-          <p className="text-muted-foreground">
-            시스템 접근 권한 및 사용자를 관리합니다.
-          </p>
+          <p className="text-muted-foreground">시스템 접근 권한 및 사용자를 관리합니다.</p>
         </div>
         <Button>
           <PlusIcon className="mr-2 h-4 w-4" />
@@ -38,20 +23,14 @@ export default function UsersPage() {
       <div className="flex items-center space-x-2">
         <div className="relative flex-1 max-w-sm">
           <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="사용자 검색..."
-            className="pl-8"
-          />
+          <Input type="search" placeholder="사용자 검색..." className="pl-8" />
         </div>
       </div>
 
       <Card>
         <CardHeader>
           <CardTitle>시스템 사용자</CardTitle>
-          <CardDescription>
-            ERP 시스템에 접근 가능한 사용자 목록입니다.
-          </CardDescription>
+          <CardDescription>ERP 시스템에 접근 가능한 사용자 목록입니다.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
@@ -76,10 +55,14 @@ export default function UsersPage() {
                 <TableCell>최고관리자</TableCell>
                 <TableCell>방금 전</TableCell>
                 <TableCell>
-                  <Badge variant="outline" className="text-green-600 border-green-600">활성</Badge>
+                  <Badge variant="outline" className="text-green-600 border-green-600">
+                    활성
+                  </Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">설정</Button>
+                  <Button variant="ghost" size="sm">
+                    설정
+                  </Button>
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -93,10 +76,14 @@ export default function UsersPage() {
                 <TableCell>편집자</TableCell>
                 <TableCell>2시간 전</TableCell>
                 <TableCell>
-                  <Badge variant="outline" className="text-green-600 border-green-600">활성</Badge>
+                  <Badge variant="outline" className="text-green-600 border-green-600">
+                    활성
+                  </Badge>
                 </TableCell>
                 <TableCell className="text-right">
-                  <Button variant="ghost" size="sm">설정</Button>
+                  <Button variant="ghost" size="sm">
+                    설정
+                  </Button>
                 </TableCell>
               </TableRow>
             </TableBody>

@@ -67,9 +67,7 @@ function NavMainItem({
 
   // 상위 메뉴 활성화 여부 계산
   const isPathMatch = pathname === item.url;
-  const hasActiveChild = item.items?.some(
-    (subItem) => pathname === subItem.url
-  );
+  const hasActiveChild = item.items?.some((subItem) => pathname === subItem.url);
   const isActive = isPathMatch || hasActiveChild;
 
   if (!item.items?.length) {
@@ -87,18 +85,10 @@ function NavMainItem({
 
   return (
     <SidebarMenuItem>
-      <SidebarMenuButton
-        tooltip={item.title}
-        onClick={() => setIsOpen(!isOpen)}
-        isActive={isActive}
-      >
+      <SidebarMenuButton tooltip={item.title} onClick={() => setIsOpen(!isOpen)} isActive={isActive}>
         {item.icon && <item.icon />}
         <span>{item.title}</span>
-        <ChevronRightIcon
-          className={`ml-auto transition-transform duration-200 ${
-            isOpen ? "rotate-90" : ""
-          }`}
-        />
+        <ChevronRightIcon className={`ml-auto transition-transform duration-200 ${isOpen ? "rotate-90" : ""}`} />
       </SidebarMenuButton>
       {isOpen && (
         <SidebarMenuSub>

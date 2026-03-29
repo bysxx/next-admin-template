@@ -1,21 +1,8 @@
+import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function StockPage() {
   return (
@@ -23,9 +10,7 @@ export default function StockPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">재고 관리</h1>
-          <p className="text-muted-foreground">
-            재고 현황을 모니터링하고 조정합니다.
-          </p>
+          <p className="text-muted-foreground">재고 현황을 모니터링하고 조정합니다.</p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline">
@@ -69,9 +54,7 @@ export default function StockPage() {
       <Card>
         <CardHeader>
           <CardTitle>현재 재고</CardTitle>
-          <CardDescription>
-            전체 창고의 실시간 재고 현황입니다.
-          </CardDescription>
+          <CardDescription>전체 창고의 실시간 재고 현황입니다.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
