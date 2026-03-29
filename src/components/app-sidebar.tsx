@@ -1,9 +1,9 @@
 "use client";
 
-import { NavDocuments } from "components/nav-documents";
-import { NavMain } from "components/nav-main";
-import { NavSecondary } from "components/nav-secondary";
-import { NavUser } from "components/nav-user";
+import { NavDocuments } from "@/components/nav-documents";
+import { NavMain } from "@/components/nav-main";
+import { NavSecondary } from "@/components/nav-secondary";
+import { NavUser } from "@/components/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -12,7 +12,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "components/ui/sidebar";
+} from "@/components/ui/sidebar";
 import {
   ArrowUpCircleIcon,
   ClipboardListIcon,
@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Switch } from "components/ui/switch";
+import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 
 const data = {

@@ -1,12 +1,12 @@
-import { Badge } from "components/ui/badge";
-import { Button } from "components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "components/ui/card";
+} from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "components/ui/table";
+} from "@/components/ui/table";
 import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
 
 export default function StockPage() {

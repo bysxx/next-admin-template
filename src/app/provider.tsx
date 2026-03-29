@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ReactQueryStreamedHydration } from "@tanstack/react-query-next-experimental";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import React from "react";
-import { Toaster } from "components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 
 export function Providers(props: { children: React.ReactNode }) {
   const [queryClient] = React.useState(

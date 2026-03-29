@@ -19,15 +19,15 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Badge } from "components/ui/badge";
-import { Button } from "components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "components/ui/chart";
-import { Checkbox } from "components/ui/checkbox";
+} from "@/components/ui/chart";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -35,17 +35,17 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "components/ui/dropdown-menu";
-import { Input } from "components/ui/input";
-import { Label } from "components/ui/label";
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "components/ui/select";
-import { Separator } from "components/ui/separator";
+} from "@/components/ui/select";
+import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
   SheetClose,
@@ -55,7 +55,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "components/ui/sheet";
+} from "@/components/ui/sheet";
 import {
   Table,
   TableBody,
@@ -63,14 +63,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "components/ui/table";
+} from "@/components/ui/table";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "components/ui/tabs";
-import { useIsMobile } from "hooks/use-mobile";
+} from "@/components/ui/tabs";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   type ColumnDef,
   type ColumnFiltersState,

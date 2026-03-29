@@ -6,7 +6,7 @@
       "esnext"
     ],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -21,7 +21,7 @@
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
-    "target": "es5",
+    "target": "es2017",
     "outDir": "out",
     "declaration": true,
     "sourceMap": true,
@@ -34,10 +34,9 @@
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
-    "baseUrl": "./src",
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     },
     "plugins": [

@@ -1,14 +1,14 @@
-import { Avatar, AvatarFallback, AvatarImage } from "components/ui/avatar";
-import { Badge } from "components/ui/badge";
-import { Button } from "components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "components/ui/card";
-import { Input } from "components/ui/input";
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   Table,
   TableBody,
@@ -16,7 +16,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "components/ui/table";
+} from "@/components/ui/table";
 import { PlusIcon, SearchIcon } from "lucide-react";
 
 export default function UsersPage() {
